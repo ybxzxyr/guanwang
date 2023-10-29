@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <title>LP框架官网-博客</title>
+  <link rel="stylesheet" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../res/static/css/index.css">
+  <!--添加此信息，构造博客-->
+  <meta name="referrer" content="never">
+</head>
+<body style="background-color: #2F4056">
+  <!-- nav部分 -->
+  <div class="nav index header">
+
+  </div>
+  <!-- banner部分 -->
+  <div class="banner-small item">
+    <div class="title">
+      <p>聚焦专栏</p>
+      <br>
+      <p class="en">用心整理，只为您用着顺心，省心，安心</p>
+    </div>
+  </div>
+  <!-- main -->
+  <style>
+    .banner-small {
+      height: 124px;
+      margin-top: 41px;
+    }
+    /*左侧个人资料*/
+    .left-profile{
+      cursor: pointer;
+      min-height: 186px;
+      padding: 16px 24px;
+      background: #fff;
+      margin-top: 3px;
+      font-size: 14px;
+      line-height: 1.57142857;
+      background-color: #f5f6f7;
+      border-bottom: 1px solid #f4ced0;
+      color: #333;
+      min-height: 100%;
+    }
+    /*博客列表*/
+   .blog-item{
+     cursor: pointer;
+     min-height: 186px;
+     /*width: 760px;*/
+     padding: 16px 24px;
+     background: #fff;
+     margin-top: 3px;
+     font-size: 14px;
+     line-height: 1.57142857;
+     background-color: #f5f6f7;
+     border-bottom: 1px solid #f4ced0;
+
+     color: #333;
+     min-height: 100%;
+   }
+   /*标题*/
+   .blog-item .blog-title{
+     margin-bottom: 8px;
+   }
+   .blog-title .flay{
+     display: inline-block;
+     width: 26px;
+     height: 26px;
+     line-height: 26px;
+     text-align: center;
+     font-size: 12px;
+     border-radius: 50%;
+     margin-right: 8px;
+     margin-top: 0;
+
+     float: left !important;
+   }
+   .type1{
+     color: #ca0c16;
+     border: 1px solid #f4ced0;
+   }
+    .type2{
+      color: #86ca5e;
+      border: 1px solid #e7f4df;
+   }
+   .blog-item .title{
+     font-size: 18px;
+     color: #4d4d4d;
+     letter-spacing: 0;
+     text-align: left;
+     line-height: 28px;
+   }
+
+    /*介绍*/
+    .detail{
+      font-size: 14px;
+      color: #999;
+      letter-spacing: 0;
+      text-align: left;
+      line-height: 22px;
+      margin-bottom: 8px;
+    }
+    /*发布时间*/
+    .detail-data span{
+      font-size: 14px;
+      color: #999;
+      letter-spacing: 0;
+      line-height: 20px;
+      margin-right: 24px;
+    }
+
+    /*推荐*/
+    .cate-tj{
+
+    }
+    .cate-tj a{
+      color: #6080af;
+      font-size: 12px;
+    }
+    .cate-tj .cate-link{
+
+    }
+
+    @media screen and (max-width: 1900px) {
+      #cate-content{
+        margin: 1px 100px
+      }
+    }
+    @media screen and (max-width: 600px) {
+      /*设置手机显示样式 */
+      #cate-content{
+        margin: 10px 10px
+      }
+    }
+
+  </style>
+  <div class="layui-row layui-col-space5"  id="cate-content">
+    <div class="layui-col-md3">
+      <div class="left-profile">
+        <div>
+          <div class="news-panel">
+            <div class="blog-title">
+
+              <h2><img src="http://avatar.csdn.net/C/A/9/3_zzhuan_1.jpg" class="layui-nav-img"><a href="javascript:void(0)" class="title " id="author" target="_blank">十年呵护</a></h2>
+
+            </div>
+
+            <hr>
+            <div class="detail-data" id="pro-data"></div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-lg12 content blog-item">
+        <div>
+          <div class="news-panel">
+              <h3>智能推荐</h3>
+              <hr>
+            <div class="cate-tj">
+              <div class="cate-link"><a>博主努力研发中...</a></div>
+              <div class="cate-link"><a>1.基于强大的标签体系</a></div>
+              <div class="cate-link"><a>2.基于小伙伴的精心整理</a></div>
+              <div class="cate-link"><a>3.核心算法精准定位</a></div>
+              <div class="cate-link"><a>4.不同的推荐方式，另类的展现效果</a></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-lg12 content blog-item">
+        <div>
+          <div class="news-panel">
+              <h3>技能图谱</h3>
+              <hr>
+            <div class="cate-tj">
+              <div class="cate-link"><a>博主努力研发中...</a></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-lg12 content blog-item">
+        <div>
+          <div class="news-panel">
+              <h3>福利资料</h3>
+              <hr>
+            <div class="cate-tj">
+              <div class="cate-link"><a>博主努力整理中...</a></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layui-col-md9" id="cateList">
+
+          <div class="layui-col-lg12 content blog-item">
+            <div>
+              <div class="news-panel">
+              <div class="blog-title">
+                <span class="flay type1">原 </span>
+                <h2><a href="detail.html" class="title">努力加载中...</a></h2>
+
+              </div>
+              <div class="detail"><span>www.shinians.com
+                ...</span></div>
+              <div class="detail-data"> <span>发布时间：2018-06-21</span> &nbsp;&nbsp;&nbsp;&nbsp; <span>阅读120</span>&nbsp;&nbsp;&nbsp;&nbsp; <span>评论数：0</span></div>
+            </div>
+            </div>
+          </div>
+
+    </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-news">
+
+
+  </div>
+  <!-- footer部分 -->
+  <div class="footer">
+
+  </div>
+<script src="../res/layui/layui.js"></script>
+<script src="../res/static/js/system-site.js"></script>
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+  layui.config({
+    base: '../res/static/js/' 
+  }).use('firm');
+
+
+  layui.use(['jquery', 'layer'], function() {
+      var $ = layui.$ //重点处
+
+      //初始化开头结尾
+      $(function () {
+          $(".footer").load("../html/common_footer.html");
+          $(".header").load("../html/common_header.html");
+
+          var cate=system.getQueryStringV(window.location.search,"cate");
+          if(system.isBlank(cate)){
+              alert("分类不存在")
+              return;
+          }
+          system.post(system.pre+"/system/blogs",{type:"4",tags:cate,page:"1","rows":50},function(data){
+              var items=$("#cateList").html("");
+              for(var m in data.result.dataList){
+                  var domain=data.result.dataList[m];
+                  var typeName=domain.blogType=="1"?"原":domain.blogType=="2"?"转":"译";
+
+                  var item='     <div class="layui-col-lg12 content blog-item">\n' +
+                      '            <div>\n' +
+                      '              <div class="news-panel">\n' +
+                      '              <div class="blog-title">\n' +
+                      '                <span class="flay type1">'+typeName+' </span>\n' +
+                      '                <h2><a href="detail.html?id='+domain.id+'" class="title" target="_blank">'+domain.title+'</a></h2>\n' +
+                      '\n' +
+                      '              </div>\n' +
+                      '              <div class="detail"><span>'+domain.intro+'</span></div>\n' +
+                      '              <div class="detail-data"> <span>发布时间'+domain.rc1+'</span> &nbsp;&nbsp;&nbsp;&nbsp; <span>阅读'+domain.sourceReadno+'</span>&nbsp;&nbsp;&nbsp;&nbsp; <span>评论数：0</span></div>\n' +
+                      '            </div>\n' +
+                      '            </div>\n' +
+                      '          </div>';
+                  items.append(item)
+              }
+
+
+          },$)
+          //加载 博主信息
+          system.post(system.pre+"/sys/tagsLibPage",{key:cate,type:"4",page:"1","rows":50},function(data){
+              console.log("1111");
+              console.log(data);
+//              var items=$("#cateList").html("");
+              for(var m in data.result.dataList){
+                  var domain=data.result.dataList[m];
+                  var domain=data.result.dataList[m];
+                  $("#author").attr("href",domain.href)
+                  $("#author").html(domain.author)
+                  $("#pro-data").html(' <span>专栏： '+domain.name+'</span><br/>' +
+                      '<span>篇章：'+domain.tagnum+'</span> <br/> <span>关注:'+domain.focnum+'</span><br><span>访问：'+domain.readnum+'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>');
+
+              }
+
+          },$)
+
+
+
+      })
+  })
+</script>
+
+</body>
+</html>

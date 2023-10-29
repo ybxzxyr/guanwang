@@ -1,0 +1,90 @@
+<div class="layui-container">
+    <!-- 公司logo -->
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="res/static/img/logo2.png" alt="蓝破云官网">
+        </a>
+    </div>
+    <div class="nav-list">
+        <button>
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="layui-nav" lay-filter="">
+            <li class="layui-nav-item "><a href="index.html">首页</a></li>
+            <!--<li class="layui-nav-item"><a href="blog.html">文章博客</a></li>-->
+            <!--<li class="layui-nav-item"><a href="lesson.html">精品课程</a></li>-->
+            <!--<li class="layui-nav-item"><a href="http://www.shinians.com/view/lp/login/index.html" target="_blank">后台演示</a></li>-->
+            <!--<li class="layui-nav-item"><a href="http://www.shinians.com/share/link">案例演示</a></li>-->
+            <!--<li class="layui-nav-item"><a href="product.html">产品</a></li>-->
+            <!--<li class="layui-nav-item"><a href="about.html">关于</a></li>-->
+        </ul>
+    </div>
+</div>
+<!--<script src="../res/layui/layui.js"></script>-->
+<script>
+    layui.use(['jquery', 'layer'], function() {
+        var $ = layui.$ //重点处
+        $(function () {
+            var url=window.location.href;
+            $(".layui-nav li a").each(function () {
+                console.log($(this).html())
+                if(url.indexOf("index.html")>-1&&"首页"==$(this).html()){
+                    $(this).parent().addClass("layui-this");
+                }else if(url.indexOf("blog.html")>-1&&"文章博客"==$(this).html()){
+                    $(this).parent().addClass("layui-this");
+                }else if(url.indexOf("cate.html")>-1&&"文章博客"==$(this).html()){
+                    $(this).parent().addClass("layui-this");
+                }else if(url.indexOf("detail.html")>-1&&"文章博客"==$(this).html()){
+                    $(this).parent().addClass("layui-this");
+                }else if(url.indexOf("lesson.html")>-1&&"精品课程"==$(this).html()){
+                    $(this).parent().addClass("layui-this");
+                }
+
+            })
+        })
+    })
+
+
+    // 右下角
+    layui.use(['util', 'laydate', 'layer'], function(){
+        var util = layui.util
+            ,laydate = layui.laydate
+            ,layer = layui.layer;
+        //固定块
+        util.fixbar({
+            bar2: true,
+            bar1: "<span id='wchart' title='老司机赶快上车...' class='layui-icon layui-icon-login-wechat' style='font-size: 31px;'></span>"
+//						你可以通过重置bar的位置，比如 css: {right: 100, bottom: 100}
+            ,css: {right: 50, bottom: 30}
+//						自定义区块背景色
+            ,bgcolor: "rgba(35, 86, 87,.5)"
+//						点击bar的回调，函数返回一个type参数，用于区分bar类型。支持的类型有：bar1、bar2、top
+            ,click: function(type){
+                if(type === 'bar1'){
+                    var msg='<div id="bottom-qrcode"  style="display: block;">' +
+                        ' <h4>微信关注</h4>' +
+                        ' <div class="panel-body"><img alt="微信关注"  class="w-chart" ></div>' +
+                        ' </div>';
+                    layer.tips(msg, '#wchart', {
+                        tips: 1,
+                        fixed: true,
+                        time:8000
+                    });
+                } else if(type === 'bar2') {
+
+                    /*	var layW=layer.open({
+                                title:'<span class="modal-title-logo"><span style="color: #f8bb2b" class="entypo-plus-circled"></span></span>新增地区码表',
+                                type: 2,
+                                skin: 'layui-layer-lan',
+                                area: ['580px','338px'],
+                                content:"https://mp.weixin.qq.com/s/CJR_I97edwZu6rIF5yGqmQ"
+                            });
+                        layer.full(layW);*/
+                    //LP由来.
+                    window.open("https://mp.weixin.qq.com/s/0GDhsc3dz-TKeawRWozv-g");
+                }
+            }
+        });
+    })
+
+</script>

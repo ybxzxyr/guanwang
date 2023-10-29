@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <title>LP框架官网-博客</title>
+  <link rel="stylesheet" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../res/static/css/index.css">
+  <meta name="referrer" content="never">
+  <!--csdn博客-->
+  <link rel="stylesheet" href="../res/static/css/shinian_blog.css">
+</head>
+<body style="background-color: #2F4056">
+  <!-- nav部分 -->
+  <div class="nav index header">
+
+  </div>
+  <!-- banner部分 -->
+  <div class="banner-small item">
+    <div class="title">
+      <p>聚焦详情</p>
+      <br>
+      <p class="en">标签体系，继承、重载、多样性聚焦相关文章..</p>
+    </div>
+  </div>
+  <!-- main -->
+  <style>
+    .banner-small {
+      height: 124px;
+      margin-top: 41px;
+    }
+    /*左侧个人资料*/
+    .left-profile{
+      cursor: pointer;
+      min-height: 186px;
+      padding: 16px 24px;
+      background: #fff;
+      margin-top: 3px;
+      font-size: 14px;
+      line-height: 1.57142857;
+      background-color: #f5f6f7;
+      border-bottom: 1px solid #f4ced0;
+      color: #333;
+      min-height: 100%;
+    }
+    /*博客列表*/
+   .blog-item{
+     cursor: pointer;
+     min-height: 186px;
+     /*width: 760px;*/
+     padding: 16px 24px;
+     background: #fff;
+     margin-top: 3px;
+     font-size: 14px;
+     line-height: 1.57142857;
+     background-color: #f5f6f7;
+     border-bottom: 1px solid #f4ced0;
+
+     color: #333;
+     min-height: 100%;
+   }
+   /*标题*/
+   .blog-item .blog-title{
+     margin-bottom: 8px;
+   }
+   .blog-title .flay{
+     display: inline-block;
+     width: 26px;
+     height: 26px;
+     line-height: 26px;
+     text-align: center;
+     font-size: 12px;
+     border-radius: 50%;
+     margin-right: 8px;
+     margin-top: 0;
+
+     float: left !important;
+   }
+   .type1{
+     color: #ca0c16;
+     border: 1px solid #f4ced0;
+   }
+    .type2{
+      color: #86ca5e;
+      border: 1px solid #e7f4df;
+   }
+   .blog-item .title{
+     font-size: 18px;
+     color: #4d4d4d;
+     letter-spacing: 0;
+     text-align: left;
+     line-height: 28px;
+   }
+
+    /*介绍*/
+    .detail{
+      font-size: 14px;
+      color: #999;
+      letter-spacing: 0;
+      text-align: left;
+      line-height: 22px;
+      margin-bottom: 8px;
+    }
+    /*发布时间*/
+    .detail-data span{
+      font-size: 14px;
+      color: #999;
+      letter-spacing: 0;
+      line-height: 20px;
+      margin-right: 24px;
+    }
+
+    /*推荐*/
+    .cate-tj{
+
+    }
+    .cate-tj a{
+      color: #6080af;
+      font-size: 12px;
+    }
+    .cate-tj .cate-link{
+
+    }
+
+    @media screen and (max-width: 1900px) {
+      #cate-content{
+        margin: 1px 100px
+      }
+    }
+    @media screen and (max-width: 600px) {
+      /*设置手机显示样式 */
+      #cate-content{
+        margin: 10px 10px
+      }
+    }
+    .article-copyright{
+      display: none !important;
+    }
+
+    .dc-btn{
+      color: orangered;
+      font-size: 12px;
+      width: 29px;
+      border: solid 1px #ccc;
+      border-radius: 12px;
+      float: right;
+    }
+  </style>
+  <div class="layui-row layui-col-space5"  id="cate-content">
+
+    <div class="layui-col-md9">
+
+          <div class="layui-col-lg12 content blog-item" style="overflow-x: auto">
+            <div>
+              <div class="news-panel">
+              <div class="blog-title">
+                <span class="flay type1" id="typeName">. </span>
+                <h2><a href="blogDetail.html" class="title" id="blog-title">...</a></h2>
+              </div>
+                <div>
+
+                  <hr><p  class="dc-btn" onclick="down()">下载</p>
+                  <hr>
+
+                </div>
+
+              <div class="detail" id="blog-content">
+
+               ...
+
+              </div>
+              <div class="detail-data" id="blog-data"> </div>
+            </div>
+            </div>
+          </div>
+
+
+    </div>
+    <div class="layui-col-md3">
+
+      <div class="layui-col-lg12 content blog-item">
+        <div>
+          <div class="news-panel">
+            <h3>相关标签</h3>
+            <hr>
+            <div class="cate-tj">
+              <div class="cate-link"><a>博主努力建当中....
+                ...</a></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    </div>
+  </div>
+
+  <div class="main-news">
+
+
+  </div>
+  <!-- footer部分 -->
+  <div class="footer">
+
+  </div>
+<script src="../res/layui/layui.js"></script>
+  <script src="../res/static/js/system-site.js"></script>
+  <script src="../res/static/js/ext/jquery.1.11.1.js"></script>
+  <script src="../res/static/js/ext/FileSaver.js"></script>
+  <script src="../res/static/js/ext/jquery.wordexport.js"></script>
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+  layui.config({
+    base: '../res/static/js/' 
+  }).use('firm');
+
+  /**
+   * 生成word
+   */
+  function down() {
+      var title=$("#blog-title").html();
+      $("#blog-content").wordExport(title);
+  };
+  layui.use(['jquery', 'layer'], function() {
+      var $ = layui.$ //重点处
+
+      //初始化开头结尾
+      $(function () {
+          $(".footer").load("../html/common_footer.html");
+          $(".header").load("../html/common_header.html");
+
+
+          var id=system.getQueryStringV(window.location.search,"id");
+         if(system.isBlank(id)){
+             alert("文章不存在")
+             return;
+         }
+         var url=system.pre+"/system/blog/"+id;
+          system.post(url,{type:"4"},function(data){
+              console.log("0000000000000");
+              console.log(data);
+              var typeName=data.result.blogType=="1"?"原":data.result.blogType=="2"?"转":"译";
+
+              $("#blog-content").html('');
+              $("#blog-content").html(data.result.content);
+              $("#blog-title").html(data.result.title);
+              $("#blog-data").html('<span >发布时间：'+data.result.rc1+'</span> &nbsp;&nbsp;&nbsp;&nbsp; <span>阅读'+data.result.sourceReadno+'</span>');
+              $("#typeName").html(typeName);
+
+          },$)
+
+      })
+  })
+</script>
+
+</body>
+</html>

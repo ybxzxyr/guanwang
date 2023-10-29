@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <title>LP框架官网-博客</title>
+  <link rel="stylesheet" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../res/static/css/index.css">
+  <!--添加此信息，构造博客-->
+  <meta name="referrer" content="never">
+</head>
+<body>
+  <!-- nav部分 -->
+  <div class="nav index header">
+
+  </div>
+  <!-- banner部分 -->
+  <div class="banner news">
+    <div class="title">
+      <p>聚焦博客(百家)</p>
+      <p class="en">Focus blog</p>
+      <p class="en">仅用于学习交流使用，如有侵权及时联系，第一时间做出处理,敬请谅解。</p>
+    </div>
+  </div>
+  <!-- main -->
+  <div class="main-news">
+    <div class="layui-container">
+      <div class="search">
+        <input type="text" name="title" class="zl-input" placeholder="请输入标题" autocomplete="off" >
+        <button class="layui-btn layui-btn-warm zl-search" >搜专栏</button>
+      </div>
+      <div class="layui-row layui-col-space20" id="blog-cate-list">
+      <!--  <div class="layui-col-lg6 content">
+          <div>
+            <div class="news-img"><a href="cate.html"><img src="../res/static/img/news_img1.jpg"></a></div><div class="news-panel">
+              <strong><a href="cate.html">SpringCloud专栏</a></strong>
+              <p class="detail"><span>找老婆要找爱发脾气的女人。永远不会发脾气的女人就如同一杯白开水，解渴，却无味。而发脾气的女人正如烈酒般，刺激而令人无法忘怀。</span><a href="blogDetail.html">[详细]</a></p>
+              <p class="read-push">阅读 <span>120</span>&nbsp;&nbsp;&nbsp;&nbsp;发布时间：<span>2018-06-21</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-lg6 content">
+          <div>
+            <div class="news-img"><a href="blogDetail.html"><img src="../res/static/img/news_img1.jpg"></a></div><div class="news-panel">
+              <strong><a href="blogDetail.html">写经验交流材料的技巧全在这了！</a></strong>
+              <p class="detail"><span>看不到您的原稿，这样对空发议论，估计对您的指导性是不大的。建议您将原稿贴出来，好让老师们针对指导。这里简单给出意见：</span><a href="blogDetail.html">[详细]</a></p>
+              <p class="read-push">阅读 <span>835</span>&nbsp;&nbsp;&nbsp;&nbsp;发布时间：<span>2018-06-21</span></p>
+            </div>
+          </div>
+        </div>-->
+      </div>
+
+      <div id="newsPage"></div>
+    </div>
+  </div>
+  <!-- footer部分 -->
+  <div class="footer">
+
+  </div>
+  <script src="../res/static/js/system-site.js"></script>
+  <script src="../res/static/js/api-blog.js"></script>
+  <script src="../res/layui/layui.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+  layui.config({
+    base: '../res/static/js/' 
+  }).use('firm');
+
+
+  layui.use(['jquery', 'layer'], function() {
+      var $ = layui.$ //重点处
+
+      //初始化开头结尾
+      $(function () {
+          $(".footer").load("../html/common_footer.html");
+          $(".header").load("../html/common_header.html");
+          apiBlog.initBlogCate(1,50,"","",$);
+
+          /**
+           * 回车搜索
+           */
+          $(document).keypress(function(e) {
+              // 回车键事件
+              if(e.which == 13) {
+                  apiBlog.searchZL($);
+              }
+          });
+
+          //点击搜索
+          $(".zl-search").click(function(){
+              apiBlog.searchZL($);
+          })
+
+
+
+      })
+  })
+</script>
+
+</body>
+</html>
